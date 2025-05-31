@@ -1,0 +1,233 @@
+/* tariffs.css - полная версия с исправлениями */
+body {
+    font-family: Jost, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.jpg');
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.tariff-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.tariff-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.tariff-block {
+    flex: 0 0 23%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 8px;
+    margin: 0 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.tariff-block h2,
+.tariff-block .price,
+.tariff-block .details,
+.tariff-block .services {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    z-index: 2;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.details, .services {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+}
+
+/* Обновленные стили для кнопки "Назад" (как в services_packages.css) */
+.back-button {
+    background-color: #e53e3e;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 30px auto;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-family: Jost, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #c53030;
+    transform: translateY(-2px);
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 90%;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.modal-content button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal-content button#confirmYes {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-content button#confirmNo {
+    background-color: #6c757d;
+    color: white;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.package-block {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.package-form {
+    margin-top: auto;
+}
+
+footer {
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .tariff-block {
+        flex: 0 0 48%;
+    }
+}
+
+@media (max-width: 576px) {
+    .tariff-block {
+        flex: 0 0 100%;
+    }
+    
+    .back-button {
+        width: 100%;
+        max-width: none;
+        padding: 12px;
+    }
+}

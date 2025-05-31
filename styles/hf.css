@@ -1,0 +1,120 @@
+header {
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-family: Jost, sans-serif;
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 72px;
+    height: 72px;
+    margin-right: auto;
+    margin-left: 320px;
+}
+nav {
+    display: flex;
+    gap: 15px;
+}
+.header_button_1, .header_button_2 {
+    font-family: Jost, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+    text-align: left;
+    color: #ffffff;
+    margin-right: 30px;
+    padding: 5px 10px;
+}
+
+/* Специфичные отступы для кнопки "Выйти" */
+.header_button_2 {
+    margin-left: auto;
+    background-color: #e53e3e;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    line-height: 24px;
+    width: 100%; /* Добавлено */
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 24px;
+}
+
+.footer_column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 24px;
+}
+
+.footer_logo {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+
+.footer_text {
+    font-family: Jost, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+    line-height: 24px;
+}
+
+.footer_link {
+    font-family: Jost, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+    line-height: 24px;
+}
+
+.footer_link:hover {
+    color: gray;
+}
+
+.footer_phone {
+    font-family: Jost, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    line-height: 24px;
+}
+
+.footer_phone:hover {
+    color: rgb(87, 87, 87);
+}
+
+.footer_address {
+    font-family: Jost, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    line-height: 24px;
+}
+.disabled-link {
+    color: #6c757d !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    text-decoration: line-through;
+    opacity: 0.7;
+}

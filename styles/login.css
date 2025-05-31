@@ -1,0 +1,128 @@
+/* Базовые стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Изменен оттенок синего */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Карточка авторизации */
+.auth-box {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Исправлен цвет тени */
+    text-align: center;
+}
+
+/* Заголовок */
+.auth-header {
+    margin-bottom: 2rem;
+}
+
+.auth-header .logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.auth-header h1 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+/* Форма */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: #000000;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.auth-input:focus {
+    border-color: #1a73e8;
+    outline: none;
+}
+
+/* Кнопки */
+.auth-button {
+    background: #48bb78;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    text-decoration: none; /* Для ссылок-кнопок */
+}
+
+.auth-button:hover {
+    background: #38a169;
+}
+
+.secondary-button {
+    background: #e2e8f0;
+    color: #2d3748;
+}
+
+.secondary-button:hover {
+    background: #cbd5e0;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .auth-box {
+        padding: 1.5rem;
+    }
+    
+    .auth-header h1 {
+        font-size: 1.3rem;
+    }
+}
